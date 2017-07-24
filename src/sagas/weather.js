@@ -10,7 +10,9 @@ const weatherApiUrl = (location: string) => (
 );
 
 const fetchWeather = (location: string) => {
-  return axios(weatherApiUrl(location)).then(({data:{query:{results:{channel:{item:{condition:{text}}}}}}}) => text);
+  return axios(weatherApiUrl(location)).then(
+    ({data:{query:{results:{channel:{item:{condition:{text}}}}}}}) => text
+  );
 }
 
 function* callFetchWeather({location}: {location: string}) {
