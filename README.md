@@ -11,9 +11,6 @@ $ npm i && npm run dev
 $ yarn && yarn run dev
 # http://localhost:9000
 ```
-
-http://localhost:
-
 ## License
 
 [MIT](LICENSE)
