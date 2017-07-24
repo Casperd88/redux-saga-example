@@ -1,12 +1,5 @@
 // @flow
-import actionTypes from './../actions';
-
-type WeatherActionType = {
-  type: string,
-  error?: boolean | string,
-  weatherResult?: string | null,
-  location?: string
-};
+import type { WeatherAction } from './../actions/weather';
 
 export type WeatherStateType = {
   location: string,
@@ -24,11 +17,11 @@ const defaultState: WeatherStateType = {
   weatherResult: null
 };
 
-const weather = (state: WeatherStateType = defaultState, action: WeatherActionType): WeatherStateType => {
+const weather = (state: WeatherStateType = defaultState, action: WeatherAction): WeatherStateType => {
 
   switch (action.type) {
 
-    case actionTypes.WEATHER_FETCH_START:
+    case 'WEATHER_FETCH_START':
       return {
         ...state,
         isFetching: true,
@@ -36,7 +29,7 @@ const weather = (state: WeatherStateType = defaultState, action: WeatherActionTy
         location: action.location
       };
 
-    case actionTypes.WEATHER_FETCH_SUCCESS:
+    case 'WEATHER_FETCH_SUCCESS':
       return {
         ...state,
         fetchedFromServer: true,
@@ -45,7 +38,7 @@ const weather = (state: WeatherStateType = defaultState, action: WeatherActionTy
         weatherResult: action.weatherResult
       };
 
-    case actionTypes.WEATHER_FETCH_FAIL:
+    case 'WEATHER_FETCH_FAIL':
       return {
         ...state,
         fetchedFromServer: false,

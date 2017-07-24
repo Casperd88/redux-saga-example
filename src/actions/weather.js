@@ -1,38 +1,38 @@
 // @flow
-import actionTypes from './index';
-
-type FetchWeatherStartAction = {
-  type: string,
+export type FetchWeatherStartAction = {
+  type: 'WEATHER_FETCH_START',
   location: string
 };
-
-type FetchWeatherSuccessAction = {
-  type: string,
-  weatherResult: ?string
-};
-
-type FetchWeatherFailAction = {
-  type: string,
-  error: string | false
-};
-
 const fetchWeatherStart = (location: string): FetchWeatherStartAction => ({
-  type: actionTypes.WEATHER_FETCH_START,
+  type: 'WEATHER_FETCH_START',
   location
 });
 
+export type FetchWeatherSuccessAction = {
+  type: 'WEATHER_FETCH_SUCCESS',
+  weatherResult: ?string
+};
 const fetchWeatherSuccess = (weatherResult: ?string): FetchWeatherSuccessAction => ({
-  type: actionTypes.WEATHER_FETCH_SUCCESS,
+  type: 'WEATHER_FETCH_SUCCESS',
   weatherResult
 });
 
+export type FetchWeatherFailAction = {
+  type: 'WEATHER_FETCH_FAIL',
+  error: string | false
+};
 const fetchWeatherFail = (error: string | false): FetchWeatherFailAction => ({
-  type: actionTypes.WEATHER_FETCH_FAIL,
+  type: 'WEATHER_FETCH_FAIL',
   error
 });
+
+export type WeatherAction =
+| FetchWeatherStartAction
+| FetchWeatherSuccessAction
+| FetchWeatherFailAction;
 
 export {
   fetchWeatherStart,
   fetchWeatherSuccess,
   fetchWeatherFail
-}
+};

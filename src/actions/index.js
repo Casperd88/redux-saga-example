@@ -1,8 +1,0 @@
-// @flow
-const actionTypes = {
-  WEATHER_FETCH_START: 'WEATHER_FETCH_START',
-  WEATHER_FETCH_SUCCESS: 'WEATHER_FETCH_SUCCESS',
-  WEATHER_FETCH_FAIL: 'WEATHER_FETCH_FAIL'
-}
-
-export default actionTypes;
