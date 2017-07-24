@@ -28,14 +28,6 @@ const weather = (state: WeatherStateType = defaultState, action: WeatherActionTy
 
   switch (action.type) {
 
-    case actionTypes.WEATHER_FETCH_FAIL:
-      return {
-        ...state,
-        fetchedFromServer: false,
-        isFetching: false,
-        fetchError: action.error
-      };
-
     case actionTypes.WEATHER_FETCH_START:
       return {
         ...state,
@@ -51,6 +43,14 @@ const weather = (state: WeatherStateType = defaultState, action: WeatherActionTy
         isFetching: false,
         fetchError: false,
         weatherResult: action.weatherResult
+      };
+
+    case actionTypes.WEATHER_FETCH_FAIL:
+      return {
+        ...state,
+        fetchedFromServer: false,
+        isFetching: false,
+        fetchError: action.error
       };
 
     default:
