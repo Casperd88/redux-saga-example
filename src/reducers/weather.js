@@ -1,7 +1,7 @@
 import actionTypes from './../actions';
 
 const defaultState = {
-  location: 'Brussels',
+  location: 'Barcelona',
   fetchedFromServer: false,
   isFetching: false,
   fetchError: false,

@@ -10,8 +10,8 @@ const Weather = ({
   goFetch
 }) => (
   <div>
-    <h1>Weather Saga</h1>
-    <select onChange={event => goFetch(event.target.value)}>
+    <h1>Showing weather for {location}</h1>
+    <select onChange={event => goFetch(event.target.value)} value={location}>
       {cities.map((city, index) => (
         <option value={city} key={index}>{city}</option>
       ))}
