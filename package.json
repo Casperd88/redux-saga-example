@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "flow:watch": "flow-watch"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -17,8 +18,10 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "react-hot-loader": "^3.0.0-beta.6",
     "html-webpack-plugin": "^2.29.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "flow-bin": "^0.51.0",
+    "flow-watch": "^1.1.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   },
@@ -29,14 +32,8 @@
     "react-dom": "15.5.3",
     "react-inject-props-decorator": "^1.2.0",
     "react-redux": "5.0.5",
-    "react-router-dom": "^4.1.2",
-    "react-router-server": "^4.2.1",
     "redux": "3.7.1",
-    "redux-form": "^7.0.1",
     "redux-logger": "^3.0.6",
-    "redux-promise-middleware": "4.2.1",
-    "redux-saga": "^0.15.5",
-    "redux-thunk": "^2.2.0",
-    "validate.js": "^0.11.1"
+    "redux-saga": "^0.15.5"
   }
 }

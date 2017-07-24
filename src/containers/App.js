@@ -20,9 +20,7 @@ class App extends Component {
 
   @injectProps
   render({weatherProps, goFetch}) {
-    return (
-      <Weather name="Casper" goFetch={goFetch} {...weatherProps}/>
-    )
+    return <Weather name="Casper" goFetch={goFetch} {...weatherProps}/>;
   }
 }
 

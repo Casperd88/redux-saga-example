@@ -1,6 +1,22 @@
+// @flow
 import actionTypes from './../actions';
 
-const defaultState = {
+type WeatherActionType = {
+  type: string,
+  error?: boolean | string,
+  weatherResult?: string | null,
+  location?: string
+};
+
+type WeatherStateType = {
+  location: string,
+  fetchedFromServer: boolean,
+  isFetching: boolean,
+  fetchError: boolean | string,
+  weatherResult: string | null
+};
+
+const defaultState: WeatherStateType = {
   location: 'Barcelona',
   fetchedFromServer: false,
   isFetching: false,
@@ -8,7 +24,7 @@ const defaultState = {
   weatherResult: null
 };
 
-const weather = (state = defaultState, action) => {
+const weather = (state: WeatherStateType = defaultState, action: WeatherActionType): WeatherStateType => {
 
   switch (action.type) {
 
