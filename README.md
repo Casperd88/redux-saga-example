@@ -5,12 +5,12 @@ Basic example implementation of redux saga.
 
 ```sh
 $ npm i && npm run dev
-```
-or
-
-```sh
+# or
 $ yarn && yarn run dev
+# http://localhost:9000
 ```
+
+http://localhost:
 
 ## License
 
