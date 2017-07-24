@@ -8,12 +8,12 @@ type WeatherActionType = {
   location?: string
 };
 
-type WeatherStateType = {
+export type WeatherStateType = {
   location: string,
   fetchedFromServer: boolean,
   isFetching: boolean,
   fetchError: boolean | string,
-  weatherResult: string | null
+  weatherResult: ?string
 };
 
 const defaultState: WeatherStateType = {

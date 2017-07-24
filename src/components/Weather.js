@@ -1,5 +1,7 @@
+// @flow
 import React from 'react';
 import cities from './../data/cities';
+import type WeatherStateType from './../reducers/weather';
 
 const Weather = ({
   location,
@@ -8,6 +10,13 @@ const Weather = ({
   isFetching,
   fetchError,
   goFetch
+}: {
+  location: string,
+  fetchedFromServer: boolean,
+  isFetching: boolean,
+  fetchError: boolean | string,
+  weatherResult: ?string,
+  goFetch: (location: string) => void
 }) => (
   <div>
     <h1>Showing weather for {location}</h1>
